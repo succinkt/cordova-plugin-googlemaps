@@ -236,7 +236,7 @@
       <!-- Google Play Services SDK -->
       <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
       <!-- for Android 9 or above -->
-      <!--<uses-library android:name="org.apache.http.legacy" android:required="false"/>-->
+      <uses-library android:name="org.apache.http.legacy" android:required="false"/>
     </config-file>
 
     <config-file target="AndroidManifest.xml" parent="/manifest">
