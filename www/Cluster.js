@@ -114,9 +114,9 @@ Cluster.prototype.getItemLength = function() {
   /*markerCluster._triggerRedraw.call(markerCluster, {
     force: true
   });*/
-  self._triggerRedraw({
+  try {self._triggerRedraw({
     force: true
-  });
+  }); } catch (e) {}
   //self._triggerRedraw.call(self);
   return this._markerArray.length;
 };
