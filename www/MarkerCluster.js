@@ -891,7 +891,7 @@ Object.defineProperty(MarkerCluster.prototype, '_redraw', {
         //------------------
         var prepareClusters = {};
         targetMarkers.forEach(function (marker) {
-          if (marker.get('_cluster').isAdded) {
+          if (marker.get('_cluster').isAdded || !marker.isVisible()) {
             if (self.debug) {
               console.log('isAdded', marker);
             }
