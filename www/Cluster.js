@@ -106,12 +106,19 @@ Cluster.prototype.remove = function() {
   });
 };
 Cluster.prototype.getItemLength = function() {
-  var cnt = 0;
-  this._markerArray.forEach(function(marker) {
+  //var cnt = 0;
+  /*this._markerArray.forEach(function(marker) {
     if(marker.isVisible())
     cnt++;
+  });*/
+  /*markerCluster._triggerRedraw.call(markerCluster, {
+    force: true
+  });*/
+  self._triggerRedraw({
+    force: true
   });
-  return cnt;
+  //self._triggerRedraw.call(self);
+  return this._markerArray.length;
 };
 
 module.exports = Cluster;
