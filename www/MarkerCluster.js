@@ -151,6 +151,11 @@ var MarkerCluster = function (map, markerClusterOptions, _exec) {
     });
     return marker;
   };
+
+  self.redraw = function () {
+    self._triggerRedraw({ force: true });
+  };
+
   self.addMarkers = function (markers) {
     var results = [];
     if (utils.isArray(markers) || Array.isArray(markers)) {
