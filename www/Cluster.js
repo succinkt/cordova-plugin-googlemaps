@@ -106,7 +106,12 @@ Cluster.prototype.remove = function() {
   });
 };
 Cluster.prototype.getItemLength = function() {
-  return this._markerArray.length;
+  var cnt = 0;
+  this._markerArray.forEach(function(marker) {
+    if(marker.isVisible())
+    cnt++;
+  });
+  return cnt;
 };
 
 module.exports = Cluster;
